@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="12345678910111213141516def select_sort(alist):	&amp;apos;&amp;apos;&amp;apos;选择排序：每轮排序找到未排序数列中最小值，与未排序数列第一个元素交换，	数列分为前面的有序数列和后面的无序数列&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	for i in range(n-1):		min = i 		for j in range">
+  <meta name="description" content="“归并”的含义是将两个或两个以上的有序序列组合成一个新的有序表。直到得到一个长度为n的有序序列为止。这种排序方法称为2-路归并排序。">
 <meta name="keywords" content="python,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="选择排序">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/选择排序/index.html">
+<meta property="og:title" content="归并排序">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/sort_归并排序/index.html">
 <meta property="og:site_name" content="星尘之间">
-<meta property="og:description" content="12345678910111213141516def select_sort(alist):	&amp;apos;&amp;apos;&amp;apos;选择排序：每轮排序找到未排序数列中最小值，与未排序数列第一个元素交换，	数列分为前面的有序数列和后面的无序数列&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	for i in range(n-1):		min = i 		for j in range">
+<meta property="og:description" content="“归并”的含义是将两个或两个以上的有序序列组合成一个新的有序表。直到得到一个长度为n的有序序列为止。这种排序方法称为2-路归并排序。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-06T05:34:54.914Z">
+<meta property="og:updated_time" content="2019-03-06T07:33:40.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="选择排序">
-<meta name="twitter:description" content="12345678910111213141516def select_sort(alist):	&amp;apos;&amp;apos;&amp;apos;选择排序：每轮排序找到未排序数列中最小值，与未排序数列第一个元素交换，	数列分为前面的有序数列和后面的无序数列&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	for i in range(n-1):		min = i 		for j in range">
+<meta name="twitter:title" content="归并排序">
+<meta name="twitter:description" content="“归并”的含义是将两个或两个以上的有序序列组合成一个新的有序表。直到得到一个长度为n的有序序列为止。这种排序方法称为2-路归并排序。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/选择排序/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/sort_归并排序/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>选择排序 | 星尘之间</title>
+  <title>归并排序 | 星尘之间</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/选择排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/sort_归并排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柴鑫">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">选择排序
+          <h1 class="post-title" itemprop="name headline">归并排序
 
               
             
@@ -370,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2019-03-06 12:18:15 / 修改时间：13:34:54" itemprop="dateCreated datePublished" datetime="2019-03-06T12:18:15+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 12:22:53 / 修改时间：15:33:40" itemprop="dateCreated datePublished" datetime="2019-03-06T12:22:53+08:00">2019-03-06</time>
             
 
             
@@ -427,7 +427,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def select_sort(alist):</span><br><span class="line">	&apos;&apos;&apos;选择排序：每轮排序找到未排序数列中最小值，与未排序数列第一个元素交换，</span><br><span class="line">	数列分为前面的有序数列和后面的无序数列&apos;&apos;&apos;</span><br><span class="line">	n = len(alist)</span><br><span class="line">	for i in range(n-1):</span><br><span class="line">		min = i </span><br><span class="line">		for j in range(i+1,n):</span><br><span class="line">			if alist[min] &gt; alist[j]:</span><br><span class="line">				min = j</span><br><span class="line">		alist[i] ,alist[min] = alist[min] , alist[i]</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	li = [54,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	select_sort(li)</span><br><span class="line">	print(li)</span><br></pre></td></tr></table></figure>
+        <p>“归并”的含义是将两个或两个以上的有序序列组合成一个新的有序表。直到得到一个长度为n的有序序列为止。这种排序方法称为2-路归并排序。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">def merge_sort(alist):</span><br><span class="line">	&apos;&apos;&apos;归并排序&apos;&apos;&apos;</span><br><span class="line">	n = len(alist)</span><br><span class="line">	if n &lt;= 1:</span><br><span class="line">		return alist</span><br><span class="line">	mid = n // 2</span><br><span class="line">	left_li = merge_sort(alist[:mid])</span><br><span class="line">	right_li = merge_sort(alist[mid:])</span><br><span class="line">	left_pointer = 0</span><br><span class="line">	right_pointer = 0</span><br><span class="line">	result = []</span><br><span class="line">	while left_pointer &lt;len(left_li) and right_pointer &lt; len(right_li):</span><br><span class="line">		if left_li[left_pointer] &lt;= right_li[right_pointer]:</span><br><span class="line">			result.append(left_li[left_pointer])</span><br><span class="line">			left_pointer +=1</span><br><span class="line">		else:</span><br><span class="line">			result.append(right_li[right_pointer])</span><br><span class="line">			right_pointer +=1</span><br><span class="line">	result += left_li[left_pointer:]</span><br><span class="line">	result += right_li[right_pointer:]</span><br><span class="line">	return result  </span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	li = [54,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	sorted_li = merge_sort(li)</span><br><span class="line">	print(sorted_li)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -466,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/06/堆栈类pic/" rel="next" title="堆栈的python实现">
-                <i class="fa fa-chevron-left"></i> 堆栈的python实现
+              <a href="/2019/03/06/sort_插入排序/" rel="next" title="插入排序">
+                <i class="fa fa-chevron-left"></i> 插入排序
               </a>
             
           </div>
@@ -476,8 +476,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/06/快速排序/" rel="prev" title="快速排序">
-                快速排序 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/06/sort_冒泡排序/" rel="prev" title="冒泡排序">
+                冒泡排序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +538,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -592,7 +592,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

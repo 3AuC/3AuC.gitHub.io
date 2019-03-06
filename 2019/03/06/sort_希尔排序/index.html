@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718192021222324252627def quick_sort(alist, first, last ):	&amp;apos;&amp;apos;&amp;apos;快速排序&amp;apos;&amp;apos;&amp;apos;	if first &amp;gt;= last:		return	mid = alist[first]	low = first 	high = last 	whi">
+  <meta name="description" content="希尔排序在插入排序算法的基础上进行了改进，算法的时间复杂度有较大的改进。其算法的基本思想是：先将待排记录序列分割成为若干子序列分别进行插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行一次直接插入排序。">
 <meta name="keywords" content="python,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/快速排序/index.html">
+<meta property="og:title" content="希尔排序">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/sort_希尔排序/index.html">
 <meta property="og:site_name" content="星尘之间">
-<meta property="og:description" content="123456789101112131415161718192021222324252627def quick_sort(alist, first, last ):	&amp;apos;&amp;apos;&amp;apos;快速排序&amp;apos;&amp;apos;&amp;apos;	if first &amp;gt;= last:		return	mid = alist[first]	low = first 	high = last 	whi">
+<meta property="og:description" content="希尔排序在插入排序算法的基础上进行了改进，算法的时间复杂度有较大的改进。其算法的基本思想是：先将待排记录序列分割成为若干子序列分别进行插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行一次直接插入排序。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-06T05:35:04.788Z">
+<meta property="og:updated_time" content="2019-03-06T07:34:29.250Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627def quick_sort(alist, first, last ):	&amp;apos;&amp;apos;&amp;apos;快速排序&amp;apos;&amp;apos;&amp;apos;	if first &amp;gt;= last:		return	mid = alist[first]	low = first 	high = last 	whi">
+<meta name="twitter:title" content="希尔排序">
+<meta name="twitter:description" content="希尔排序在插入排序算法的基础上进行了改进，算法的时间复杂度有较大的改进。其算法的基本思想是：先将待排记录序列分割成为若干子序列分别进行插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行一次直接插入排序。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/快速排序/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/sort_希尔排序/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>快速排序 | 星尘之间</title>
+  <title>希尔排序 | 星尘之间</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/快速排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/sort_希尔排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柴鑫">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">快速排序
+          <h1 class="post-title" itemprop="name headline">希尔排序
 
               
             
@@ -370,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2019-03-06 12:20:35 / 修改时间：13:35:04" itemprop="dateCreated datePublished" datetime="2019-03-06T12:20:35+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 12:24:52 / 修改时间：15:34:29" itemprop="dateCreated datePublished" datetime="2019-03-06T12:24:52+08:00">2019-03-06</time>
             
 
             
@@ -427,7 +427,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">def quick_sort(alist, first, last ):</span><br><span class="line">	&apos;&apos;&apos;快速排序&apos;&apos;&apos;</span><br><span class="line">	if first &gt;= last:</span><br><span class="line">		return</span><br><span class="line">	mid = alist[first]</span><br><span class="line">	low = first </span><br><span class="line">	high = last </span><br><span class="line">	while low &lt; high:</span><br><span class="line">		while low &lt; high and alist[high] &gt;= mid :</span><br><span class="line">				high -=1</span><br><span class="line">		alist[low] = alist[high]</span><br><span class="line"></span><br><span class="line">		while low&lt;high and alist[low] &lt; mid :</span><br><span class="line">			low +=1</span><br><span class="line">		alist[high] = alist[low]</span><br><span class="line"></span><br><span class="line">	alist[low] = mid </span><br><span class="line"></span><br><span class="line">	quick_sort(alist, first, low-1)</span><br><span class="line">	quick_sort(alist, low+1, last)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	li = [54,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	quick_sort(li, 0, len(li)-1)</span><br><span class="line">	print(li)</span><br></pre></td></tr></table></figure>
+        <p>希尔排序在插入排序算法的基础上进行了改进，算法的时间复杂度有较大的改进。其算法的基本思想是：先将待排记录序列分割成为若干子序列分别进行插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行一次直接插入排序。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def shell_sort(alist):</span><br><span class="line">	&apos;&apos;&apos;希尔排序：对数列分组后进行插入排序&apos;&apos;&apos;</span><br><span class="line">	n = len(alist)</span><br><span class="line">	gap = n // 2</span><br><span class="line">	while gap &gt;=1:</span><br><span class="line">		#变化gap的值直到1为止进行插入排序</span><br><span class="line">		for i in range(gap, n):</span><br><span class="line">			j = i </span><br><span class="line">			while j &gt; 0:</span><br><span class="line">				if alist[j] &lt; alist[j-gap]:</span><br><span class="line">					alist[j] , alist[j-gap] = alist[j-gap] , alist[j]</span><br><span class="line">					j -= gap</span><br><span class="line">				else:</span><br><span class="line">					break</span><br><span class="line">		gap //= 2</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	li = [54,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	shell_sort(li)</span><br><span class="line">	print(li)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -466,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/06/选择排序/" rel="next" title="选择排序">
-                <i class="fa fa-chevron-left"></i> 选择排序
+              <a href="/2019/03/06/sort_冒泡排序/" rel="next" title="冒泡排序">
+                <i class="fa fa-chevron-left"></i> 冒泡排序
               </a>
             
           </div>
@@ -476,8 +476,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/06/归并排序/" rel="prev" title="归并排序">
-                归并排序 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/06/一元非线性回归/" rel="prev" title="一元非线性回归">
+                一元非线性回归 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +538,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -592,7 +592,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

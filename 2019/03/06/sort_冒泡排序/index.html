@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="123456789101112131415161718192021def shell_sort(alist):	&amp;apos;&amp;apos;&amp;apos;希尔排序：对数列分组后进行插入排序&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	gap = n // 2	while gap &amp;gt;=1:		#变化gap的值直到1为止进行插入排序		for i in range(gap, n)">
+  <meta name="description" content="最简单的一种排序算法。先从数组中找到最大值(或最小值)并放到数组最左端(或最右端)，然后在剩下的数字中找到次大值(或次小值),以此类推，直到数组有序排列。算法的时间复杂度为O(n^2)。">
 <meta name="keywords" content="python,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="希尔排序">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/希尔排序/index.html">
+<meta property="og:title" content="冒泡排序">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/sort_冒泡排序/index.html">
 <meta property="og:site_name" content="星尘之间">
-<meta property="og:description" content="123456789101112131415161718192021def shell_sort(alist):	&amp;apos;&amp;apos;&amp;apos;希尔排序：对数列分组后进行插入排序&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	gap = n // 2	while gap &amp;gt;=1:		#变化gap的值直到1为止进行插入排序		for i in range(gap, n)">
+<meta property="og:description" content="最简单的一种排序算法。先从数组中找到最大值(或最小值)并放到数组最左端(或最右端)，然后在剩下的数字中找到次大值(或次小值),以此类推，直到数组有序排列。算法的时间复杂度为O(n^2)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-06T05:35:30.585Z">
+<meta property="og:updated_time" content="2019-03-06T07:34:02.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="希尔排序">
-<meta name="twitter:description" content="123456789101112131415161718192021def shell_sort(alist):	&amp;apos;&amp;apos;&amp;apos;希尔排序：对数列分组后进行插入排序&amp;apos;&amp;apos;&amp;apos;	n = len(alist)	gap = n // 2	while gap &amp;gt;=1:		#变化gap的值直到1为止进行插入排序		for i in range(gap, n)">
+<meta name="twitter:title" content="冒泡排序">
+<meta name="twitter:description" content="最简单的一种排序算法。先从数组中找到最大值(或最小值)并放到数组最左端(或最右端)，然后在剩下的数字中找到次大值(或次小值),以此类推，直到数组有序排列。算法的时间复杂度为O(n^2)。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/希尔排序/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/sort_冒泡排序/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>希尔排序 | 星尘之间</title>
+  <title>冒泡排序 | 星尘之间</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/希尔排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/sort_冒泡排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柴鑫">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">希尔排序
+          <h1 class="post-title" itemprop="name headline">冒泡排序
 
               
             
@@ -370,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2019-03-06 12:24:52 / 修改时间：13:35:30" itemprop="dateCreated datePublished" datetime="2019-03-06T12:24:52+08:00">2019-03-06</time>
+              <time title="创建时间：2019-03-06 12:23:39 / 修改时间：15:34:02" itemprop="dateCreated datePublished" datetime="2019-03-06T12:23:39+08:00">2019-03-06</time>
             
 
             
@@ -427,7 +427,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def shell_sort(alist):</span><br><span class="line">	&apos;&apos;&apos;希尔排序：对数列分组后进行插入排序&apos;&apos;&apos;</span><br><span class="line">	n = len(alist)</span><br><span class="line">	gap = n // 2</span><br><span class="line">	while gap &gt;=1:</span><br><span class="line">		#变化gap的值直到1为止进行插入排序</span><br><span class="line">		for i in range(gap, n):</span><br><span class="line">			j = i </span><br><span class="line">			while j &gt; 0:</span><br><span class="line">				if alist[j] &lt; alist[j-gap]:</span><br><span class="line">					alist[j] , alist[j-gap] = alist[j-gap] , alist[j]</span><br><span class="line">					j -= gap</span><br><span class="line">				else:</span><br><span class="line">					break</span><br><span class="line">		gap //= 2</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">	li = [54,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	shell_sort(li)</span><br><span class="line">	print(li)</span><br></pre></td></tr></table></figure>
+        <p>最简单的一种排序算法。先从数组中找到最大值(或最小值)并放到数组最左端(或最右端)，然后在剩下的数字中找到次大值(或次小值),以此类推，直到数组有序排列。算法的时间复杂度为O(n^2)。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">def bubble_sort(alist):</span><br><span class="line">	&apos;&apos;&apos;冒泡排序：将大数依次向后交换，每轮一定能将剩余数中的最大数交换到最后位置&apos;&apos;&apos;</span><br><span class="line">	n = len(alist)</span><br><span class="line">	for j in range(n-1):</span><br><span class="line">		#for j in range(n-1,0,-1)等价</span><br><span class="line">		count = 0</span><br><span class="line">		for i in range(n-1-j):</span><br><span class="line">			#for i in range(j)等价</span><br><span class="line">			if alist[i] &gt; alist[i+1]:</span><br><span class="line">				# temp = alist[i]</span><br><span class="line">				# alist[i+1] = alist[i]</span><br><span class="line">				# alist[i+1] = temp</span><br><span class="line">				alist[i],alist[i+1] = alist[i+1],alist[i]</span><br><span class="line">				#python特殊用法，等号两侧，逗号前互换，逗号后互换</span><br><span class="line">				count +=1</span><br><span class="line">		if 0 == count:</span><br><span class="line">			return</span><br><span class="line"></span><br><span class="line">if __name__ ==&quot;__main__&quot;:</span><br><span class="line">	li = [45,26,93,17,77,31,44,55,20]</span><br><span class="line">	print(li)</span><br><span class="line">	bubble_sort(li)</span><br><span class="line">	print(li)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -466,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/06/冒泡排序/" rel="next" title="冒泡排序">
-                <i class="fa fa-chevron-left"></i> 冒泡排序
+              <a href="/2019/03/06/sort_归并排序/" rel="next" title="归并排序">
+                <i class="fa fa-chevron-left"></i> 归并排序
               </a>
             
           </div>
@@ -475,6 +475,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/06/sort_希尔排序/" rel="prev" title="希尔排序">
+                希尔排序 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -534,7 +538,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -588,7 +592,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
